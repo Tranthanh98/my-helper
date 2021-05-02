@@ -1,6 +1,12 @@
 import { useState } from "react"
 import { isNumeric } from "./helper";
 
+/* 
+example:
+    const name = useInputText("", yup.string().required("Trường này là bắt buộc"));
+    <TextField {...name} fullWidth variant="outlined" label="Họ tên" />
+*/
+
 export const useInputText = (initValue, validate = null, isNumber = false)=>{
     const [value, setValue] = useState(initValue);
     const [err, setErr] = useState({
