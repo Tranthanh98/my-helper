@@ -128,4 +128,11 @@ const toCamelString = (origKey) => {
 };
 ```
 
-### 
+### Focus textField bôi đen
+``` javascript
+	onFocus: (event) => {
+	      const { target } = event;
+	      const extensionStarts = target.value.lastIndexOf("");
+	      if (target.type === "text") target.setSelectionRange(0, extensionStarts);
+	    },
+```
