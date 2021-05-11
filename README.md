@@ -16,6 +16,7 @@ export function sleep(time){
     return new Promise(resolve => setTimeout((resolve), time));
 }
 ```
+```js
 export function random(length, str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"){
     let data = "";
     for(let i=0; i< length; i++){
