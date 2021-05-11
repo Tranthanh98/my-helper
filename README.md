@@ -3,13 +3,19 @@
 let isEmailAddress = val => {  
 	return /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/.test(val) || /w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*/.test(val);  
 }  
-
+```
+### format money/ tiền
+```js
 export const formatMoney = (number, unit = "")=>{
     return String(number).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") + unit; 
 }
+```
+### sleep Promise/ fake api/ fake async
+```js
 export function sleep(time){
     return new Promise(resolve => setTimeout((resolve), time));
 }
+```
 export function random(length, str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"){
     let data = "";
     for(let i=0; i< length; i++){
