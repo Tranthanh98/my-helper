@@ -143,3 +143,13 @@ const toCamelString = (origKey) => {
 	      if (target.type === "text") target.setSelectionRange(0, extensionStarts);
 	    },
 ```
+
+```javascript
+	function stringFormat(string) {
+	  [...Array(arguments.length)].forEach(
+	    (_, i) => (string = string.replace("{" + (i - 1) + "}", arguments[i]))
+	  );
+	  return string;
+	}
+
+```
